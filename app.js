@@ -3,12 +3,14 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const productRoutes = require("./routes/productRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 app.use(express.json());
 
 // rejestrujemy trasy
 app.use("/api/products", productRoutes);
+app.use("/api/auth", authRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
