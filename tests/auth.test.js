@@ -3,7 +3,6 @@ const app = require("../app");
 const mongoose = require("mongoose");
 
 beforeAll(async () => {
-  // połączenie z testową bazą danych
   await mongoose.connect("mongodb://localhost:27017/api-test", {
     useNewUrlParser: true,
     useUnifiedTopology: true,

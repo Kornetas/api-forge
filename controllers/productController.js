@@ -10,7 +10,7 @@ exports.getAllProducts = async (req, res) => {
   }
 };
 
-//post api products
+//create new product (only for admin)
 exports.createProduct = async (req, res) => {
   try {
     const { name, price } = req.body;
@@ -62,12 +62,12 @@ exports.deleteProduct = async (req, res) => {
       product.createdBy.toString() !== req.user.id &&
       req.user.role !== "admin"
     ) {
-      return res.status(403).json({ message: "Not authorized to delete" });
+      return res.status(403).json({ message: "not authorized to delete" });
     }
 
     await product.deleteOne();
     res.json({ message: "Product deleted" });
   } catch (err) {
-    res.status(400).json({ message: "Failed to delete product" });
+    res.status(400).json({ message: "failed to delete product" });
   }
 };

@@ -1,3 +1,4 @@
+//middleware to check if users role is allowed 
 const roleMiddleware = (...allowedRoles) => {
   return (req, res, next) => {
     if (!allowedRoles.includes(req.user.role)) {
