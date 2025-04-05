@@ -54,7 +54,7 @@ npm install
 
 3. Create `.env` file in the main folder
 
-4. Coppy files:
+4. Copy and paste the following into your .env file:
 
 ```
 PORT=5000
