@@ -52,7 +52,9 @@ npm test
 npm install
 ```
 
-3. Create `.env` file:
+3. Create `.env` file in the main folder
+
+4. Coppy files:
 
 ```
 PORT=5000
@@ -60,7 +62,7 @@ MONGO_URI=mongodb://localhost:27017/api-forge
 JWT_SECRET=yourSecretKeyHere
 ```
 
-4. Start server:
+5. Start server:
 
 ```
 npm run dev
