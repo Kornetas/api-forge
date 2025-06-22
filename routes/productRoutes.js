@@ -12,10 +12,13 @@ const {
 
 //public route, show all product
 router.get("/", getAllProducts);
+
 // only logged in user with admin role can create product
 router.post("/", authMiddleware, createProduct);
+
 // only author or admin can update product
 router.put("/:id", authMiddleware, updateProduct);
+
 // only author or admin can delete product
 router.delete("/:id", authMiddleware, deleteProduct);
 

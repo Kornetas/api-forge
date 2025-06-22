@@ -62,6 +62,15 @@ MONGO_URI=mongodb://localhost:27017/api-forge
 JWT_SECRET=yourSecretKeyHere
 ```
 
+## Database Seeding
+
+To seed the database with a default admin, a normal user, and example products, run:
+
+```bash
+node seed.js
+
+```
+
 5. Start server:
 
 ```
